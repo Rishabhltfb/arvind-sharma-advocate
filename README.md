@@ -1,6 +1,6 @@
 # Arvind Kumar Sharma — Advocate, Aligarh
 
-Informational website for **Arvind Kumar Sharma**, Advocate, practising at Civil Court, Aligarh. It is a digital visiting card, not a marketing page.
+Informational website for **Arvind Kumar Sharma**, Advocate, practising at Chamber-19, District and Session Court, Aligarh. It is a digital visiting card, not a marketing page.
 
 ## Bar Council of India (keep this page compliant)
 
@@ -15,9 +15,13 @@ The site is limited to particulars allowed under **Rule 36** of the Bar Council 
 - Academic qualifications
 - Areas of practice (listed as categories, without superlatives)
 
+### Photograph
+
+A professional identification portrait is shown beside the name. It is not connected to any case. Do not add court photos, case photos, or promotional imagery.
+
 ### Not allowed (do not add)
 
-- Photographs of the advocate (especially in connection with cases)
+- Photographs of the advocate in connection with cases
 - Father’s name as a public field
 - Testimonials, client names, success rates, fees
 - Words such as “best”, “leading”, “expert”, “specialist”, “guaranteed”
@@ -37,19 +41,9 @@ The 2008 proviso requires the website to be set up **under intimation to and as 
 
 Edit [`src/data/advocate.ts`](src/data/advocate.ts) only. Do not duplicate particulars in other files.
 
-### Academic qualifications placeholder
+### Academic qualifications
 
-`qualifications` currently reads **To be updated**. Replace it with the actual degree, university and year when available, for example:
-
-```ts
-qualifications: [
-  {
-    label: "Academic qualifications",
-    labelHi: "शैक्षणिक अर्हताएँ",
-    value: "LL.B., [University], [year]",
-  },
-],
-```
+Recorded in [`src/data/advocate.ts`](src/data/advocate.ts) as **LL.B., Dr. Bhim Rao Ambedkar University (2000)**. Enrolment remains **UP10239/2024** as supplied from the Bar Association record. Do not add “years of experience” or similar promotional counts.
 
 ### Canonical URL
 

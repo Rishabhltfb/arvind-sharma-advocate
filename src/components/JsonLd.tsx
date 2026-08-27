@@ -12,10 +12,15 @@ export default function JsonLd() {
     image: `${SITE_URL}${advocate.portrait.src}`,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Civil Court",
+      streetAddress: advocate.streetAddress,
       addressLocality: advocate.locality,
       addressRegion: advocate.region,
+      postalCode: advocate.postalCode,
       addressCountry: advocate.country,
+    },
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: "Dr. Bhim Rao Ambedkar University",
     },
     memberOf: [
       {

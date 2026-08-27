@@ -16,12 +16,12 @@ const particulars = [
   {
     label: "State Bar Council (original)",
     labelHi: "राज्य बार काउंसिल (मूल)",
-    value: advocate.stateBarCouncilOriginal,
+    value: `${advocate.stateBarCouncilOriginal}, ${advocate.stateBarCouncilSeat}`,
   },
   {
     label: "State Bar Council (current roll)",
     labelHi: "राज्य बार काउंसिल (वर्तमान)",
-    value: advocate.stateBarCouncilCurrent,
+    value: `${advocate.stateBarCouncilCurrent}, ${advocate.stateBarCouncilSeat}`,
   },
   {
     label: "Bar Association",
@@ -63,9 +63,9 @@ export default function HomePage() {
               </p>
               <div className="mt-8 h-px w-24 bg-gold" />
               <p className="mt-8 max-w-xl text-lg leading-relaxed text-ink-muted">
-                Advocate practising at {advocate.address}, Uttar Pradesh.
+                Advocate practising at {advocate.court}, Uttar Pradesh.
                 <span className="font-deva mt-1 block text-base">
-                  अधिवक्ता, {advocate.addressHi}, उत्तर प्रदेश।
+                  अधिवक्ता, {advocate.courtHi}, उत्तर प्रदेश।
                 </span>
               </p>
               <p className="mt-6 max-w-xl text-[0.95rem] leading-relaxed text-ink/70">
@@ -123,9 +123,7 @@ export default function HomePage() {
                         {row.labelHi}
                       </span>
                     </dt>
-                    <dd className="text-lg text-ink-muted italic sm:text-xl">
-                      {row.value}
-                    </dd>
+                    <dd className="text-lg text-ink sm:text-xl">{row.value}</dd>
                   </div>
                 </Reveal>
               ))}
@@ -155,16 +153,26 @@ export default function HomePage() {
               </p>
             </Reveal>
 
-            <ul className="mt-10 grid gap-4 sm:grid-cols-3">
+            <ul className="mt-10 grid gap-4 lg:grid-cols-3">
               {advocate.areasOfPractice.map((area, index) => (
                 <Reveal key={area.en} delayMs={index * 70}>
-                  <li className="border border-ink/12 bg-paper px-5 py-6">
+                  <li className="h-full border border-ink/12 bg-paper px-5 py-6">
                     <p className="font-heading text-2xl font-semibold text-ink">
                       {area.en}
                     </p>
                     <p className="font-deva mt-2 text-sm text-ink-muted">
                       {area.hi}
                     </p>
+                    <ul className="mt-5 space-y-2 border-t border-ink/10 pt-4">
+                      {area.matters.map((matter) => (
+                        <li
+                          key={matter}
+                          className="text-sm leading-snug text-ink/80"
+                        >
+                          {matter}
+                        </li>
+                      ))}
+                    </ul>
                   </li>
                 </Reveal>
               ))}
