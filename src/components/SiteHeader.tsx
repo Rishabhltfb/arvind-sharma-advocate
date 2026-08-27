@@ -9,7 +9,7 @@ const links = [
 export default function SiteHeader() {
   return (
     <header className="border-b border-ink/10">
-      <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-6 py-5 sm:px-8">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-5 sm:px-8">
         <a
           href="#top"
           className="font-heading text-lg font-semibold tracking-tight text-ink"

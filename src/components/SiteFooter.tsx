@@ -3,7 +3,7 @@ import { advocate, INFORMATION_AS_ON } from "@/data/advocate";
 export default function SiteFooter() {
   return (
     <footer className="border-t border-ink/10 bg-paper-deep">
-      <div className="mx-auto max-w-5xl px-6 py-10 sm:px-8">
+      <div className="mx-auto max-w-6xl px-6 py-10 sm:px-8">
         <p className="max-w-3xl text-sm leading-relaxed text-ink-muted">
           This page is an informational record under Rule 36 of the Bar Council
           of India Rules. It is not an advertisement or solicitation of work.

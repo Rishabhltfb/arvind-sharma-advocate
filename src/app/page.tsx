@@ -1,3 +1,4 @@
+import Portrait from "@/components/Portrait";
 import Reveal from "@/components/Reveal";
 import { advocate } from "@/data/advocate";
 
@@ -45,35 +46,35 @@ export default function HomePage() {
       </a>
 
       <main id="main">
-        <section className="relative overflow-hidden border-b border-ink/10">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-y-0 left-0 hidden w-16 border-r border-ink/[0.06] sm:block"
-          />
-          <div className="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24 lg:py-28">
+        <section className="border-b border-ink/10">
+          <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-12 sm:px-8 sm:py-16 lg:grid-cols-[minmax(17rem,0.92fr)_minmax(0,1.18fr)] lg:gap-14 lg:py-20">
+            <Portrait />
+
+            <div>
               <p className="font-deva text-[0.75rem] tracking-[0.28em] text-gold uppercase">
                 {advocate.designationHi} · {advocate.designation} ·{" "}
                 {advocate.localityHi}
               </p>
-              <h1 className="mt-5 max-w-3xl font-heading text-[2.65rem] leading-[1.08] font-semibold tracking-tight text-ink sm:text-6xl lg:text-[4.25rem]">
+              <h1 className="mt-5 font-heading text-[2.65rem] leading-[1.08] font-semibold tracking-tight text-ink sm:text-6xl lg:text-[4.1rem]">
                 {advocate.name}
               </h1>
               <p className="font-deva mt-3 text-xl text-ink-muted sm:text-2xl">
                 {advocate.nameHi}
               </p>
               <div className="mt-8 h-px w-24 bg-gold" />
-              <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink-muted">
+              <p className="mt-8 max-w-xl text-lg leading-relaxed text-ink-muted">
                 Advocate practising at {advocate.address}, Uttar Pradesh.
                 <span className="font-deva mt-1 block text-base">
                   अधिवक्ता, {advocate.addressHi}, उत्तर प्रदेश।
                 </span>
               </p>
-              <p className="mt-6 max-w-2xl text-[0.95rem] leading-relaxed text-ink/70">
+              <p className="mt-6 max-w-xl text-[0.95rem] leading-relaxed text-ink/70">
                 This page records professional particulars permitted to be
                 published on an advocate’s website. It is intended so that a
                 person already seeking this information may verify name, place
                 of practice, enrolment and areas of practice.
               </p>
+            </div>
           </div>
         </section>
 
@@ -82,7 +83,7 @@ export default function HomePage() {
           className="border-b border-ink/10"
           aria-labelledby="particulars-heading"
         >
-          <div className="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-20">
+          <div className="mx-auto max-w-6xl px-6 py-16 sm:px-8 sm:py-20">
             <Reveal>
               <h2
                 id="particulars-heading"
@@ -137,7 +138,7 @@ export default function HomePage() {
           className="border-b border-ink/10 bg-paper-deep"
           aria-labelledby="practice-heading"
         >
-          <div className="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-20">
+          <div className="mx-auto max-w-6xl px-6 py-16 sm:px-8 sm:py-20">
             <Reveal>
               <h2
                 id="practice-heading"
@@ -172,7 +173,7 @@ export default function HomePage() {
         </section>
 
         <section id="contact" aria-labelledby="contact-heading">
-          <div className="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-20">
+          <div className="mx-auto max-w-6xl px-6 py-16 sm:px-8 sm:py-20">
             <Reveal>
               <h2
                 id="contact-heading"

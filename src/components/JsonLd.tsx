@@ -9,6 +9,7 @@ export default function JsonLd() {
     url: SITE_URL,
     email: advocate.email,
     telephone: advocate.phoneTel,
+    image: `${SITE_URL}${advocate.portrait.src}`,
     address: {
       "@type": "PostalAddress",
       streetAddress: "Civil Court",

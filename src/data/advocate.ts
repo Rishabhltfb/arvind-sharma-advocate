@@ -1,6 +1,7 @@
 /**
  * BCI Rule 36 / Resolution No. 50/2008 Schedule — permitted website particulars only.
- * Do not add testimonials, fees, photographs, success rates, or promotional copy.
+ * Do not add testimonials, fees, success rates, or promotional copy.
+ * Portrait: professional identification image only — not in connection with any case.
  */
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
@@ -28,6 +29,10 @@ export const advocate = {
   stateBarCouncilCurrent: "Bar Council of Uttar Pradesh",
   barAssociation: "Aligarh Bar Association",
   copAibe: "302866/2025",
+  portrait: {
+    src: "/images/arvind-kumar-sharma.jpg",
+    alt: "Arvind Kumar Sharma, Advocate",
+  },
   qualifications: [
     {
       label: "Academic qualifications",
